@@ -7,7 +7,7 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div className="index">
-        <button className="button">Hello human</button>
+        <button className="button">{__("Hello World")}</button>
       </div>
     )
   }

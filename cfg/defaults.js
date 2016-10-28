@@ -2,7 +2,7 @@
 const path = require('path')
 const srcPath = path.join(__dirname, '/../src')
 const dfltPort = 8100
-function getDefaultModules() {
+function getModules(modules) {
   return {
     loaders: [
       {
@@ -18,12 +18,12 @@ function getDefaultModules() {
         test: /\.(mp4|ogg|svg|eot)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader'
       }
-    ]
+    ].concat(modules)
   }
 }
 module.exports = {
   srcPath: srcPath,
   publicPath: '/assets/',
   port: dfltPort,
-  getDefaultModules: getDefaultModules
+  getModules: getModules
 }
