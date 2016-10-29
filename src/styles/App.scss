@@ -55,7 +55,8 @@ body {
 }
 
 .App {
-  p {
-    cursor: default;
+  button {
+    display: block;
+    margin: 10px auto;
   }
 }
